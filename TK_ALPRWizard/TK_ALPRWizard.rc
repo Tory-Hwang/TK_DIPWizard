@@ -1,0 +1,691 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 한국어 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+#ifdef _WIN32
+LANGUAGE LANG_KOREAN, SUBLANG_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)\r\n"
+    "LANGUAGE 18, 1\r\n"
+    "#pragma code_page(949)\r\n"
+    "#include ""res\\TK_ALPRWizard.rc2""  // Microsoft Visual C++ 이외의 다른 도구에서 편집한 리소스입니다.\r\n"
+    "#include ""afxres.rc""         // 표준 구성 요소입니다.\r\n"
+    "#include ""afxprint.rc""       // 인쇄 미리 보기 리소스\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\TK_ALPRWizard.ico"
+IDR_TK_ALPRWizardTYPE   ICON                    "res\\TK_ALPRWizardDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_APP_ABOUT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "파일(&F)"
+    BEGIN
+        MENUITEM "끝내기(&X)",                     ID_APP_EXIT
+    END
+    POPUP "도움말(&H)"
+    BEGIN
+        MENUITEM "TK_ALPRWizard 정보(&A)...",     ID_APP_ABOUT
+    END
+END
+
+IDR_TK_ALPRWizardTYPE MENU 
+BEGIN
+    POPUP "파일(&F)"
+    BEGIN
+        MENUITEM "모든 View 닫기",                  ID_CLOSE_ALL_VIEW
+        MENUITEM SEPARATOR
+        MENUITEM "새로 만들기(&N)\tCtrl+N",          ID_FILE_NEW
+        MENUITEM "열기(&O)...\tCtrl+O",           ID_FILE_OPEN
+        MENUITEM "닫기(&C)",                      ID_FILE_CLOSE
+        MENUITEM SEPARATOR
+        MENUITEM "끝내기(&X)",                     ID_APP_EXIT
+    END
+    POPUP "도움말(&H)"
+    BEGIN
+        MENUITEM "TK_ALPRWizard 정보(&A)...",     ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY 
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "TK_ALPRWizard 정보"
+FONT 9, "MS 셸 대화 상자", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "TK_ALPRWizard 버전 1.0",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2011",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "확인",IDOK,178,7,50,16,WS_GROUP
+END
+
+IDD_CONF_DIALOG DIALOGEX 0, 0, 676, 395
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CAPTION
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "TK ALPR CFG DIALOG"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "불균등 고립 영역 제거",IDC_CHK_UF,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,269,86,183,10
+    CONTROL         "불균등 영역 Labeling 처리",IDC_CHK_UF_LABEL,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,269,99,183,10
+    CONTROL         "불균등 영역 Labeling 병합",IDC_CHK_UF_LABEL_MERGE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,269,112,183,10
+    CONTROL         "불균등 영역 Labeling 확장",IDC_CHK_UF_LABEL_EXTENSION,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,269,125,183,10
+    CONTROL         "[ MAIN ] 투영(Projection) 처리",IDC_CHK_UF_PROJECTION,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,255,211,183,10
+    CONTROL         "[ MAIN ] 우선(Priority) 순위 처리",IDC_CHK_UF_PRIORITY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,255,283,183,10
+    CONTROL         "[ MAIN ] 원본 영상 축소",IDC_CHK_IMAGE_RESIZE,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,376,38,94,10
+    CONTROL         "불균등 DIP 선 처리",IDC_CHK_PRE_DIP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,269,73,183,10
+    CONTROL         "LPR  처리 과정 보기",IDC_CHK_SHOW_IMAGE_COPY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,570,26,83,10
+    CONTROL         "모든 불균등 LINE 보기",IDC_CHK_SHOW_UF_LINE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,510,60,141,10
+    CONTROL         "투영 DIP 이미지 보기",IDC_CHK_SHOW_PROJECTION,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,493,119,140,10
+    CONTROL         "유효 불균등 영역 보기",IDC_CHK_SHOW_LABEL_BOX,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,510,73,143,10
+    CONTROL         "유효 투영 테두리 보기",IDC_CHK_SHOW_PROJECTION_GROUP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,510,133,93,10
+    RTEXT           "축소 이미지 넓이",IDC_STATIC,5,60,61,8
+    RTEXT           "객체 최소 높이",IDC_STATIC,5,103,61,8
+    RTEXT           "객체 최소 넓이",IDC_STATIC,122,103,61,8
+    RTEXT           "불균등 최소 높이",IDC_STATIC,5,119,61,8
+    EDITTEXT        IDC_EDIT1,73,58,42,12,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT2,73,103,42,12,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT3,187,100,42,12,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT4,73,118,42,12,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    PUSHBUTTON      "저장",IDC_BUTTON1,483,343,181,23
+    PUSHBUTTON      "종료",IDC_BUTTON2,483,368,181,22
+    CONTROL         "[ MAIN ] 최종 번호판 선정",IDC_CHK_PLATE_CHOICE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,255,302,125,10
+    CONTROL         "[ MAIN ] 문자 판독",IDC_CHK_OCR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,255,361,183,10
+    RTEXT           "불균등 최소 넓이",IDC_STATIC,122,119,61,8
+    EDITTEXT        IDC_EDIT5,187,116,42,12,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    RTEXT           "최소 높이",IDC_STATIC,6,162,61,8
+    RTEXT           "최소 넓이",IDC_STATIC,122,162,61,8
+    EDITTEXT        IDC_EDIT6,73,162,42,12,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT7,187,162,42,12,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    RTEXT           "최소 비율(H/W)",IDC_STATIC,6,194,61,8
+    RTEXT           "최대 비율(H/W)",IDC_STATIC,122,194,61,8
+    RTEXT           "유럽형 비율(H/W)",IDC_STATIC,6,211,61,8
+    EDITTEXT        IDC_EDIT8,73,194,42,12,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT9,187,194,42,12,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT10,73,208,42,12,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    GROUPBOX        "Process 설정",IDC_STATIC,248,15,233,374
+    GROUPBOX        "Debug 설정",IDC_STATIC,487,17,175,211
+    GROUPBOX        "불균등 영역 검증용 설정",IDC_STATIC,3,87,234,50
+    GROUPBOX        "LPR 일반 사항 설정",IDC_STATIC,3,15,234,64
+    RTEXT           "LPR 타입",IDC_STATIC,5,31,61,8
+    RTEXT           "인식 영역 수 ",IDC_STATIC,5,46,61,8
+    EDITTEXT        IDC_EDIT11,73,28,42,12,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT12,73,42,42,12,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    GROUPBOX        "번호판 검증용 설정",IDC_STATIC,3,147,233,114
+    CONTROL         "투영 DIP 처리",IDC_CHK_PRJ_PREDIP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,267,223,183,10
+    CONTROL         "가로 직선 제거",IDC_CHK_PRJ_DEL_W_LINE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,267,237,64,10
+    CONTROL         "가로 볼트 제거",IDC_CHK_PRJ_DEL_W_BLT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,413,237,63,10
+    CONTROL         "가로 곡선 제거",IDC_CHK_PRJ_DEL_W_CUVE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,342,237,62,10
+    CONTROL         "투영 영역 설정",IDC_CHK_PRJ_RECT_1ST,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,342,264,73,10
+    RTEXT           "최소문자수",IDC_STATIC,6,178,61,8
+    RTEXT           "최대문자수",IDC_STATIC,122,178,61,8
+    EDITTEXT        IDC_EDIT20,73,178,42,12,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT21,187,178,42,12,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    CONTROL         "최종 번호판 영역 보기",IDC_CHK_SHOW_LAST_PLATE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,493,151,93,10
+    CONTROL         "[ MAIN ] 문자 Segment",IDC_CHK_CHAR_SEGMENT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,255,323,183,10
+    CONTROL         "학습 데이터 추출",IDC_CHK_CHAR_SAMPLING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,265,338,70,10
+    CONTROL         "최종 문자 영역 보기",IDC_CHK_SHOW_LAST_CHAR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,493,212,91,10
+    GROUPBOX        "한글 병합(검증) 설정",IDC_STATIC,2,270,235,53
+    RTEXT           "병합 초성 최대 넓이",IDC_STATIC,8,286,95,8
+    RTEXT           "병합 초, 중성 최대 간격 ",IDC_STATIC,8,302,95,8
+    EDITTEXT        IDC_EDIT22,106,284,42,12,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT23,106,300,42,12,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    GROUPBOX        "OCR 일반사항",IDC_STATIC,2,326,236,63
+    RTEXT           "문자 정규화 이진화 임계값",IDC_STATIC,8,356,95,8
+    EDITTEXT        IDC_CHAR_RESIZE_THS,106,354,42,12,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    RTEXT           "문자 정규화 크기 ( H )",IDC_STATIC,8,340,95,8
+    EDITTEXT        IDC_CHAR_RESIZE_H,106,338,42,12,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    CONTROL         "세션화",IDC_CHK_THINNING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,421,338,51,10
+    CONTROL         "크기 정규화",IDC_CHK_RESIZE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,341,338,58,10
+    GROUPBOX        "Log 설정",IDC_STATIC,486,231,173,78
+    CONTROL         "APP Show LOG",IDC_CHK_SHOW_APP_LOG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,492,249,84,10
+    CONTROL         "DIP Show LOG",IDC_CHK_SHOW_APP_LOG2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,492,264,88,10
+    CONTROL         "LPR Show LOG",IDC_CHK_SHOW_APP_LOG3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,492,279,88,10
+    CONTROL         "OCR Show LOG",IDC_CHK_SHOW_APP_LOG4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,492,296,88,10
+    CONTROL         "[ MAIN ] 기본 학습 처리",IDC_CHK_BASIC_STUDY,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,376,26,92,10
+    CONTROL         "EBP(기본)",IDC_RADIO_NN_1,"Button",BS_AUTORADIOBUTTON | WS_GROUP,188,344,51,13
+    CONTROL         "EBP(확장)",IDC_RADIO_NN_2,"Button",BS_AUTORADIOBUTTON,188,357,51,11
+    LTEXT           "신경망 타입",IDC_STATIC,188,335,46,8
+    CONTROL         "불균등  DIP 이미지 보기",IDC_CHK_SHOW_UF_DIP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,493,46,141,10
+    CONTROL         "4자리 숫자 Bilinear 영역 보기",IDC_CHK_SHOW_BIG4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,510,105,140,10
+    RTEXT           "좌측영상화각",IDC_STATIC,6,227,61,8
+    RTEXT           "우측영상화각",IDC_STATIC,122,224,61,8
+    EDITTEXT        IDC_EDIT28,73,224,42,12,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT29,187,221,42,12,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    RTEXT           "4자리최소높이",IDC_STATIC,9,242,61,8
+    RTEXT           "4자리최소넓이",IDC_STATIC,122,240,61,8
+    EDITTEXT        IDC_EDIT30,73,240,42,12,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    EDITTEXT        IDC_EDIT31,188,237,42,12,ES_CENTER | ES_AUTOHSCROLL | WS_DISABLED
+    CONTROL         "[ MAIN ] 4자리 숫자 검출",IDC_CHK_FIND_BIG4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,255,138,183,10
+    CONTROL         "가로 직선 제거",IDC_CHK_BIG4_DEL_W_LINE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,269,168,70,10
+    CONTROL         "가로 볼트 제거",IDC_CHK_BIG4_DEL_W_BLT,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,413,168,62,10
+    CONTROL         "가로 곡선 제거",IDC_CHK_BIG4_DEL_W_CUVE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,342,168,62,10
+    CONTROL         "세로 직선 제거",IDC_CHK_PRJ_DEL_H_LINE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,267,248,64,10
+    CONTROL         "4자리 숫자 DIP 처리",IDC_CHK_BIG4_PREDIP,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,269,153,183,10
+    CONTROL         "세로 직선 제거",IDC_CHK_BIG4_DEL_H_LINE,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,269,181,64,10
+    CONTROL         "[ SUBS ] Bilinear( 각도 보정 )",IDC_CHK_CHG_BILINEAR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,342,180,113,10
+    CONTROL         "4자리 숫자 DIP 이미지 보기",IDC_CHK_SHOW_BILINEAR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,494,91,140,10
+    CONTROL         "[ MAIN ] 불균등 영역 검출",IDC_CHK_FIND_UF,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,256,58,183,10
+    CONTROL         "잡음 제거",IDC_CHK_PRJ_DEL_NOISE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,267,264,58,10
+    CONTROL         "가로 Segment 보기",IDC_CHK_SHOW_W_CHAR_SEG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,510,180,77,10
+    CONTROL         "세로 Segment 보기",IDC_CHK_SHOW_H_CHAR_SEG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,510,194,77,10
+    CONTROL         "문자 Segment 이미지 보기",IDC_CHK_SHOW_CHAR_SEG,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,494,167,119,10
+    LTEXT           "Image Path",IDC_STATIC,488,313,38,8
+    EDITTEXT        IDC_EDIT14,484,323,143,16,ES_AUTOHSCROLL
+    PUSHBUTTON      "Set Path",IDC_SET_PATH,627,322,37,19
+    RTEXT           "신경망 학습 횟수 ",IDC_STATIC,8,371,95,8
+    EDITTEXT        IDC_E_LEARNING_CNT,106,370,40,14,ES_CENTER | ES_AUTOHSCROLL
+END
+
+IDD_DIP_DIALOG DIALOGEX 0, 0, 416, 262
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "TK ALPR DIP DIALOG"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    PUSHBUTTON      "종료",IDC_BUTTON1,319,10,61,28
+    PUSHBUTTON      "GrayScale",IDC_BUTTON49,13,9,88,15
+    PUSHBUTTON      "HistogramEqul",IDC_BUTTON2,223,201,88,14
+    PUSHBUTTON      "Histogram",IDC_BUTTON3,320,185,88,14
+    PUSHBUTTON      "Binary",IDC_BUTTON4,45,201,56,14
+    PUSHBUTTON      "Binary_Iter",IDC_BUTTON5,13,129,88,14
+    PUSHBUTTON      "Sobel",IDC_BUTTON7,223,41,88,14
+    PUSHBUTTON      "Erosion(침식)",IDC_BUTTON6,223,132,88,14
+    PUSHBUTTON      "Brightness",IDC_BUTTON8,45,84,56,14
+    PUSHBUTTON      "BitPlane",IDC_BUTTON9,13,30,88,14
+    PUSHBUTTON      "Gaussian",IDC_BUTTON10,119,50,88,14
+    PUSHBUTTON      "Canny",IDC_BUTTON11,223,25,88,14
+    PUSHBUTTON      "Labeling",IDC_BUTTON12,223,185,88,14
+    PUSHBUTTON      "Median",IDC_BUTTON15,119,30,88,14
+    PUSHBUTTON      "Beam",IDC_BUTTON16,13,66,88,14
+    PUSHBUTTON      "Contrast",IDC_BUTTON17,13,48,88,14
+    PUSHBUTTON      "Prewitt",IDC_BUTTON18,223,73,88,14
+    PUSHBUTTON      "Roberts",IDC_BUTTON19,223,57,88,14
+    PUSHBUTTON      "Mean",IDC_BUTTON20,119,10,88,14
+    PUSHBUTTON      "Weight Mean",IDC_BUTTON21,119,68,88,14
+    PUSHBUTTON      "Binary_Otsu",IDC_BUTTON22,13,147,88,14
+    PUSHBUTTON      "Binary_Adative",IDC_BUTTON23,13,164,88,14
+    PUSHBUTTON      "Diffusion(확장)",IDC_BUTTON36,320,133,88,14
+    PUSHBUTTON      "MMSE",IDC_BUTTON37,223,9,88,14
+    EDITTEXT        IDC_EDIT3,13,201,25,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT4,14,84,25,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Integral  Adative",IDC_BUTTON38,45,183,56,14
+    EDITTEXT        IDC_EDIT19,13,183,25,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Hough Trans",IDC_BUTTON45,117,129,88,14
+    PUSHBUTTON      "Rotation",IDC_BUTTON46,147,167,56,14
+    EDITTEXT        IDC_EDIT24,115,166,25,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "DoG",IDC_BUTTON47,278,89,33,14
+    EDITTEXT        IDC_EDIT25,224,90,25,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT26,249,90,25,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Bilinear Normal",IDC_BUTTON48,117,147,88,14
+    PUSHBUTTON      "UnSharp",IDC_BUTTON50,46,103,53,14
+    EDITTEXT        IDC_EDIT6,15,103,25,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "Opening",IDC_BUTTON13,223,168,88,14
+    PUSHBUTTON      "Closing",IDC_BUTTON51,320,168,88,14
+    PUSHBUTTON      "Dilation(팽창)",IDC_BUTTON52,223,149,88,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "041203b5"
+        BEGIN
+            VALUE "CompanyName", "TODO: <회사 이름>"
+            VALUE "FileDescription", "TODO: <파일 설명>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "TK_ALPRWizard.exe"
+            VALUE "LegalCopyright", "TODO: (c) <회사 이름>.  All rights reserved."
+            VALUE "OriginalFilename", "TK_ALPRWizard.exe"
+            VALUE "ProductName", "TODO: <제품 이름>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x412, 949
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_CONF_DIALOG, DIALOG
+    BEGIN
+        TOPMARGIN, 5
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE를 초기화할 수 없습니다. OLE 라이브러리 버전이 올바른지 확인하십시오."
+    IDS_ERR_NO_IMAGE        "선택된 이미지가 없습니다."
+    IDS_ERR_INVALID_FILE    "처리할 수 없는 파일 입니다"
+    IDS_ERR_NOT_24BIT       "24bit 컬러 이미지만 그레이 스케일 처리 할 수 있습니다"
+    IDS_ERR_ERR_LOAD_LIB    "필요한 dll을 로드 하지 못했습니다"
+    IDS_ERR_NOT_8BIT        "8BIT 그레이스 이미지만 변환 가능합니다."
+END
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "TK_ALPRWizard"
+    IDR_TK_ALPRWizardTYPE   "\nTK_ALPRWizard\nTK_ALPRWizard\n\n\nTKALPRWizard.Document\nTK_ALPRWizard.Document"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "TK_ALPRWizard"
+    AFX_IDS_IDLEMESSAGE     "준비"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "새 문서를 만듭니다.\n새로 만들기"
+    ID_FILE_OPEN            "기존 문서를 엽니다.\n열기"
+    ID_FILE_CLOSE           "활성 문서를 닫습니다.\n닫기"
+    ID_FILE_SAVE            "활성 문서를 저장합니다.\n저장"
+    ID_FILE_SAVE_AS         "활성 문서를 새 이름으로 저장합니다.\n다른 이름으로 저장"
+    ID_FILE_PAGE_SETUP      "인쇄 옵션을 변경합니다.\n페이지 설정"
+    ID_FILE_PRINT_SETUP     "프린터 및 인쇄 옵션을 변경합니다.\n인쇄 설정"
+    ID_FILE_PRINT           "활성 문서를 인쇄합니다.\n인쇄"
+    ID_FILE_PRINT_PREVIEW   "전체 페이지를 표시합니다.\n인쇄 미리 보기"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "프로그램 정보, 버전 번호, 저작권을 표시합니다.\n정보"
+    ID_APP_EXIT             "문서를 저장할지를 묻고 응용 프로그램을 끝냅니다.\n끝내기"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE2       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE3       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE4       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE5       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE6       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE7       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE8       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE9       "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE10      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE11      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE12      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE13      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE14      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE15      "현재 문서를 엽니다."
+    ID_FILE_MRU_FILE16      "현재 문서를 엽니다."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "다음 창으로 전환합니다.\n다음 창"
+    ID_PREV_PANE            "이전 창으로 전환합니다.\n이전 창"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_NEW           "활성 문서에 대해 다른 창을 엽니다.\n새 창"
+    ID_WINDOW_ARRANGE       "창 맨 아래에 아이콘을 정렬합니다.\n아이콘 정렬"
+    ID_WINDOW_CASCADE       "창이 겹치도록 계단식으로 정렬합니다.\n계단식 창 배열"
+    ID_WINDOW_TILE_HORZ     "창이 겹치지 않도록 바둑판식으로 정렬합니다.\n바둑판식 창 배열"
+    ID_WINDOW_TILE_VERT     "창이 겹치지 않도록 바둑판식으로 정렬합니다.\n바둑판식 창 배열"
+    ID_WINDOW_SPLIT         "활성 창을 여러 개의 창으로 분할합니다.\n분할"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "선택 영역을 지웁니다.\n지우기"
+    ID_EDIT_CLEAR_ALL       "모두 지웁니다.\n모두 지우기"
+    ID_EDIT_COPY            "선택 영역을 복사하여 클립보드에 넣습니다.\n복사"
+    ID_EDIT_CUT             "선택 영역을 잘라내어 클립보드에 넣습니다.\n잘라내기"
+    ID_EDIT_FIND            "지정한 텍스트를 찾습니다.\n찾기"
+    ID_EDIT_PASTE           "클립보드 내용을 삽입합니다.\n붙여넣기"
+    ID_EDIT_REPEAT          "마지막 작업을 반복합니다.\n반복"
+    ID_EDIT_REPLACE         "특정 텍스트를 다른 텍스트로 바꿉니다.\n바꾸기"
+    ID_EDIT_SELECT_ALL      "전체 문서를 선택합니다.\n모두 선택"
+    ID_EDIT_UNDO            "마지막 작업 실행을 취소합니다.\n실행 취소"
+    ID_EDIT_REDO            "이전에 실행 취소된 작업을 다시 실행합니다.\n다시 실행"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "도구 모음을 표시하거나 숨깁니다.\n도구 모음 설정/해제"
+    ID_VIEW_STATUS_BAR      "상태 표시줄을 표시하거나 숨깁니다.\n상태 표시줄 설정/해제"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "창 크기를 변경합니다."
+    AFX_IDS_SCMOVE          "창 위치를 변경합니다."
+    AFX_IDS_SCMINIMIZE      "창을 아이콘으로 축소합니다."
+    AFX_IDS_SCMAXIMIZE      "창을 전체 화면 크기로 확대합니다."
+    AFX_IDS_SCNEXTWINDOW    "다음 문서 창으로 전환합니다."
+    AFX_IDS_SCPREVWINDOW    "이전 문서 창으로 전환합니다."
+    AFX_IDS_SCCLOSE         "문서를 저장할 것인지 확인하고 활성 창을 닫습니다."
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "창을 보통 크기로 복원합니다."
+    AFX_IDS_SCTASKLIST      "작업 목록을 활성화합니다."
+    AFX_IDS_MDICHILD        "이 창을 활성화합니다."
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "인쇄 미리 보기 모드를 닫습니다.\n미리 보기 취소"
+END
+
+#endif    // 한국어 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 중립(시스템 기본값) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEUSD)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_SYS_DEFAULT
+#pragma code_page(949)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ALPR_DIALOG DIALOGEX 0, 0, 558, 412
+STYLE DS_SETFONT | WS_CHILD | WS_THICKFRAME
+FONT 8, "??", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "Read File",IDC_BTN_FILE,68,3,89,15
+    PUSHBUTTON      "Power ON Camera",IDC_BTN_CAMERA,390,135,76,18
+    CONTROL         "",IDC_FILE_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,5,19,153,237,WS_EX_STATICEDGE
+    GROUPBOX        "Information Of Image",IDC_STATIC,159,0,312,96
+    RTEXT           "Pixel Size",IDC_STATIC,345,80,49,9
+    RTEXT           "Image BitCount",IDC_STATIC,178,62,49,9
+    RTEXT           "Image Width",IDC_STATIC,178,44,49,9
+    RTEXT           "Image Height",IDC_STATIC,345,60,49,9
+    EDITTEXT        IDC_E_IMAGE_SIZE,400,78,64,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    EDITTEXT        IDC_E_IMAGE_BITCNT,232,62,64,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    EDITTEXT        IDC_E_IMAGE_WIDTH,232,44,64,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    EDITTEXT        IDC_E_IMAGE_HEIGHT,400,60,64,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    RTEXT           "Process Time(ms)",IDC_STATIC,166,81,61,9
+    EDITTEXT        IDC_E_TIME,232,78,64,14,ES_CENTER | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER
+    PUSHBUTTON      "All View Close",IDC_BTN_ALL_Close,390,110,76,18
+    CONTROL         "ALPR",IDC_CHK_AUTO_VIEW,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,7,27,10
+    CONTROL         "Auto",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,40,7,26,10
+    CONTROL         "",IDC_LOG_LIST,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | NOT WS_VISIBLE | WS_BORDER | WS_TABSTOP,481,389,12,10
+    PUSHBUTTON      "Clear",IDC_BTN_CLEAR,483,373,12,11,NOT WS_VISIBLE
+    CONTROL         "Show Multi \r\nDocument Interface",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_DISABLED | WS_TABSTOP,311,158,77,17
+    GROUPBOX        "Image Of Plate Number( Learning Data )",IDC_STATIC,2,260,468,108
+    COMBOBOX        IDC_COM1,5,300,27,265,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COM2,39,300,27,265,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COM3,69,300,27,265,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        COM4,99,300,27,265,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        COM5,129,300,27,265,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        COM6,160,300,27,265,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        COM7,189,300,27,265,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        COM8,219,300,27,265,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        COM9,250,300,27,265,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        COM10,281,300,27,265,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    CTEXT           "",IDC_PLATE_NUMBER,3,372,467,35,0,WS_EX_STATICEDGE
+    PUSHBUTTON      "Save",IDC_BUTTON25,5,314,25,14
+    PUSHBUTTON      "Save",IDC_BUTTON26,39,314,25,14
+    PUSHBUTTON      "Save",IDC_BUTTON27,69,314,25,14
+    PUSHBUTTON      "Save",IDC_BUTTON28,99,314,25,14
+    PUSHBUTTON      "Save",IDC_BUTTON29,129,314,25,14
+    PUSHBUTTON      "Save",IDC_BUTTON30,160,314,25,14
+    PUSHBUTTON      "Save",IDC_BUTTON31,189,314,25,14
+    PUSHBUTTON      "Save",IDC_BUTTON32,219,314,25,14
+    PUSHBUTTON      "Save",IDC_BUTTON33,250,314,25,14
+    PUSHBUTTON      "Save",IDC_BUTTON34,281,314,25,14
+    PUSHBUTTON      "Save All Feature Data",IDC_BUTTON24,89,340,103,24,BS_MULTILINE
+    PUSHBUTTON      "NN \r\nReStudy",IDC_BTNSTUDY,310,207,95,32,BS_MULTILINE
+    GROUPBOX        "Study Of Neural Network",IDC_STATIC,159,188,312,66
+    RTEXT           "Study Count",IDC_STATIC,166,209,61,8
+    RTEXT           "Study Error Rate",IDC_STATIC,166,226,61,8
+    CTEXT           "0",IDC_STUDY_CNT,232,208,64,14,SS_CENTERIMAGE | SS_SUNKEN
+    CTEXT           "0.0",IDC_ERR_RATE,232,224,64,14,SS_CENTERIMAGE | SS_SUNKEN
+    PUSHBUTTON      "Reload Conf",IDC_BUTTON35,390,158,76,18
+    PUSHBUTTON      "Save Image",IDC_BT_IMAGE_SAVE,400,40,64,15,BS_MULTILINE
+    EDITTEXT        IDC_EDIT1,232,25,232,14,ES_AUTOHSCROLL
+    RTEXT           "File Name ",IDC_STATIC,171,28,56,14
+    PUSHBUTTON      "Show Conf Dlg",IDC_BTN_SHOW_CONF,309,111,76,18,BS_MULTILINE
+    COMBOBOX        COM11,311,300,27,265,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        COM12,341,300,27,265,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        COM13,371,300,27,265,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Save",IDC_BUTTON39,311,314,25,14
+    PUSHBUTTON      "Save",IDC_BUTTON40,341,314,25,14
+    PUSHBUTTON      "Save",IDC_BUTTON41,370,314,25,14
+    COMBOBOX        COM14,401,300,27,265,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        COM15,431,300,27,265,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        COM16,495,366,27,265,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Save",IDC_BUTTON42,400,314,25,14
+    PUSHBUTTON      "Save",IDC_BUTTON43,430,314,25,14
+    PUSHBUTTON      "Save",IDC_BUTTON44,494,380,19,14
+    CONTROL         "Save Raw",IDC_CHK_RAW_SAVE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,354,43,46,9
+    PUSHBUTTON      "Show DIP Dlg",IDC_BTN_SHOW_DIP,309,135,76,18,BS_MULTILINE
+    GROUPBOX        "Show Dialog",IDC_STATIC,304,99,168,84
+    LTEXT           "",IDC_IMG_PATH,232,8,232,14,SS_SUNKEN
+    RTEXT           "File Path",IDC_STATIC,168,12,56,8
+    RTEXT           "Feature Count",IDC_STATIC,411,337,50,8
+    CTEXT           "0",IDC_FEATURE_CNT,410,348,55,14,SS_CENTERIMAGE | SS_SUNKEN
+    PUSHBUTTON      "Get Feature Count",IDC_BTNFEATURE,303,340,103,24
+    PUSHBUTTON      "Backup Feature Data File",IDC_BTN_BACKUP,195,340,103,24,BS_MULTILINE
+    GROUPBOX        "Version",IDC_STATIC,161,99,140,84
+    RTEXT           "Application",IDC_STATIC,166,114,61,9
+    RTEXT           "DIP Engine",IDC_STATIC,166,131,61,9
+    RTEXT           "LPR Engine",IDC_STATIC,166,148,61,9
+    RTEXT           "OCR Engine",IDC_STATIC,166,166,61,9
+    CTEXT           "",IDC_APP_VER,232,114,64,14,SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CTEXT           "",IDC_DIP_VER,232,131,64,14,SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CTEXT           "",IDC_LPR_VER,232,148,64,14,SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CTEXT           "",IDC_OCR_VER,232,166,64,14,SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CONTROL         "전체 저장",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,5,337,49,18
+    CONTROL         "기본 학습 자동저장",IDC_CHk_SAME_OCR,"Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,5,354,80,10
+    PUSHBUTTON      "NN \r\nForce Save",IDC_BTN_NN_SAVE,413,207,54,32,BS_MULTILINE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ALPR_DIALOG, DIALOG
+    BEGIN
+        RIGHTMARGIN, 557
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 중립(시스템 기본값) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_KOR)
+LANGUAGE 18, 1
+#pragma code_page(949)
+#include "res\TK_ALPRWizard.rc2"  // Microsoft Visual C++ 이외의 다른 도구에서 편집한 리소스입니다.
+#include "afxres.rc"         // 표준 구성 요소입니다.
+#include "afxprint.rc"       // 인쇄 미리 보기 리소스
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

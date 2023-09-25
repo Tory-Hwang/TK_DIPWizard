@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29709.97
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TK_ALPRWizard", "TK_ALPRWizard\TK_ALPRWizard.vcxproj", "{571F9BC2-2E4B-4D7A-A1F6-5DA9AAFB653C}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TK_DIP", "TK_DIP\TK_DIP.vcxproj", "{39D99610-51C2-414C-A7C3-343B193F1F36}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TK_LPR", "TK_LPR\TK_LPR.vcxproj", "{A1657E92-42AE-4FEA-B355-AE990BCF455D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TK_OCR", "TK_OCR\TK_OCR.vcxproj", "{07FCEB03-DB13-4673-A331-9614391E6D4F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{571F9BC2-2E4B-4D7A-A1F6-5DA9AAFB653C}.Debug|Win32.ActiveCfg = Debug|Win32
+		{571F9BC2-2E4B-4D7A-A1F6-5DA9AAFB653C}.Debug|Win32.Build.0 = Debug|Win32
+		{571F9BC2-2E4B-4D7A-A1F6-5DA9AAFB653C}.Release|Win32.ActiveCfg = Release|Win32
+		{571F9BC2-2E4B-4D7A-A1F6-5DA9AAFB653C}.Release|Win32.Build.0 = Release|Win32
+		{39D99610-51C2-414C-A7C3-343B193F1F36}.Debug|Win32.ActiveCfg = Debug|Win32
+		{39D99610-51C2-414C-A7C3-343B193F1F36}.Debug|Win32.Build.0 = Debug|Win32
+		{39D99610-51C2-414C-A7C3-343B193F1F36}.Release|Win32.ActiveCfg = Release|Win32
+		{39D99610-51C2-414C-A7C3-343B193F1F36}.Release|Win32.Build.0 = Release|Win32
+		{A1657E92-42AE-4FEA-B355-AE990BCF455D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A1657E92-42AE-4FEA-B355-AE990BCF455D}.Debug|Win32.Build.0 = Debug|Win32
+		{A1657E92-42AE-4FEA-B355-AE990BCF455D}.Release|Win32.ActiveCfg = Release|Win32
+		{A1657E92-42AE-4FEA-B355-AE990BCF455D}.Release|Win32.Build.0 = Release|Win32
+		{07FCEB03-DB13-4673-A331-9614391E6D4F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{07FCEB03-DB13-4673-A331-9614391E6D4F}.Debug|Win32.Build.0 = Debug|Win32
+		{07FCEB03-DB13-4673-A331-9614391E6D4F}.Release|Win32.ActiveCfg = Release|Win32
+		{07FCEB03-DB13-4673-A331-9614391E6D4F}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {007CCF8C-0756-4CBC-AB6F-A068D25955B5}
+	EndGlobalSection
+EndGlobal

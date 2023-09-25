@@ -1,0 +1,2 @@
+[DIP]
+dip_show_log=0

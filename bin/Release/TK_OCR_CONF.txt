@@ -1,0 +1,6 @@
+[OCR]
+ocr_show_log=0
+ocr_nn_type=1
+ocr_stt_resize_ths=70
+ocr_stt_char_h=40
+ocr_stt_learning_cnt=50000

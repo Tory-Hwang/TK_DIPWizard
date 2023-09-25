@@ -1,0 +1,11 @@
+; TK_LPR.def : Declares the module parameters for the DLL.
+
+LIBRARY      "TK_LPR"
+DESCRIPTION  'TK_LPR Windows Dynamic Link Library'
+
+EXPORTS
+    LPR_Initialize @1;
+    LPR_Release @2;
+    LPR_DIFFProcess @3;
+    LPR_LPRProcess @4;
+    LPR_IOCTL @5;

@@ -1,0 +1,9 @@
+LIBRARY      "TK_OCR"
+DESCRIPTION  'TK_LPR Windows Dynamic Link Library'
+
+EXPORTS
+    OCR_Initialize @1;
+    OCR_Release @2;
+    OCR_OCRProcess @3;
+    OCR_Restudy @4;
+    OCR_IOCTL @5;

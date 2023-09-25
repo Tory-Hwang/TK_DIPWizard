@@ -1,0 +1,12 @@
+; TK_DIP.def : Declares the module parameters for the DLL.
+
+LIBRARY      "TK_DIP"
+DESCRIPTION  'TK_DIP Windows Dynamic Link Library'
+
+EXPORTS
+    DIP_Initialize @1;
+    DIP_Release @2;
+    DIP_CopyImageAllocData @3
+    DIP_FreeAllocData @4;
+    DIP_ImageProcess @5;
+    DIP_IOCTL @6;
